@@ -51,6 +51,10 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: rcmdcheck
+          extra-packages: rcmdcheck, devtools
+     
+      - name: build package
+        run: devtools::install(quick = TRUE)
+        shell: Rscript {0}
 
       - uses: r-lib/actions/check-r-package@v2
