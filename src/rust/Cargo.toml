@@ -7,5 +7,5 @@ edition = '2018'
 crate-type = [ 'staticlib' ]
 
 [dependencies]
-extendr-api = '*'
+extendr-api = { git = "https://github.com/yutannihilation/extendr.git", branch = "tmp/minimal-libR-sys" }
 polars = "*"
